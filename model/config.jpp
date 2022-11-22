@@ -1,0 +1,43 @@
+﻿/**
+通用基础数据类定义, 雷达仿真软件配置参数相关
+2022-03-09 ，mqzhao
+ */
+
+namespace cpp schedule
+namespace java com.utm.model.common
+namespace python model.common
+
+
+/** 配置文件类 */
+class ConfigInfo{
+    /** 本地监听端口 暂定  */
+    var i32 port,
+    /** 组播地址 未启用  */
+    var string address,
+    /** 通信类型  0:UDP  1:其他 暂时仅支持udp模式 */
+    var i32 type,
+    /** 红外图像生成软件的遥控地址  */
+    var string osg_address,
+    /** 红外图像生成软件的遥控端口  */
+    var i32 osg_port,
+    /** 是否向红外图像生成软件转发第三方的遥控指令  */
+    var i32 osg_enable,
+    /** 雷达图像生成软件的遥控地址  */
+    var string radargui_address,
+    /** 雷达图像生成软件的遥控端口  */
+    var i32 radargui_port,
+    /** 是否向雷达图像生成软件转发第三方的遥控指令  */
+    var i32 radargui_enable,
+    /** 第三方软件的遥测地址  */
+    var string thrid_address,
+    /** 第三方软件的遥测端口  */
+    var i32 thrid_port,
+    /** 是否向第三方软件转发雷达状态数据  */
+    var i32 third_enable,
+    /** 遥测指令转发频率，单位毫秒ms  */
+    var i32 interval,
+    /** 当前雷达设备绑定的飞行器唯一性ID  */
+    var string plane_regno,
+    /** 当前雷达设备唯一性ID  */
+    var string regno,
+}
